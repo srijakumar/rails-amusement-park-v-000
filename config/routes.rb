@@ -8,6 +8,8 @@ get '/login' => 'users#new'
 get '/login' => 'users#create'
 get '/logout' => 'users#destroy'
 
+post '/login' => 'users#create'
+
 get '/secret' => 'secrets#show'
 resources :users
 

@@ -1,4 +1,10 @@
-<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
-  <input name=name>
+<!--<%= form_tag ({controller: 'users', action: 'create', method: 'post'}) do %>
+  <input name= name >
   <input type=submit value='login'>
+<% end %>-->
+
+
+<%= form_tag("/user") do %>
+  Name: <%= text_field_tag "name" %><br>
+  <%= submit_tag "Login" %>
 <% end %>

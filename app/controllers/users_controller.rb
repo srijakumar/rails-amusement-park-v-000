@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     return redirect_to(controller: 'users', action: 'new') if !params[:name] || params[:name].empty?
-    user[:name] = params[:name]
+    session[:name] = params[:name]
     redirect_to controller: 'application', action: 'hello'
   end
 
