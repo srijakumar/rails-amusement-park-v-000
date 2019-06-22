@@ -1,3 +1,4 @@
 class Ride < ApplicationRecord
-  has_many :users
+  belongs_to :users
+  belongs_to :attractions
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
 #get 'secrets/new'
 
-root 'application#hello'
+#root 'application#hello'
 #get '/signup' => 'users#new'
 #get '/signup' => 'users#create'
 #get '/logout' => 'users#destroy'
@@ -15,7 +15,7 @@ root 'application#hello'
 
 
 #get '/secret' => 'secrets#show'
-resources :users
+resources :users, only:[:new, :create]
 resources :rides
 resources :attractions
 

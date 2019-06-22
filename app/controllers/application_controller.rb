@@ -1,18 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  def hello
-    redirect_to controller: 'secrets', action: 'show' unless session[:name]
-  end
+  #def hello
+  #  redirect_to controller: 'secrets', action: 'show' unless session[:name]
+  #end
 
-  def current_user
-    session[:name]
-  end
+  #def current_user
+  #  session[:name]
+  #end
 
-  private
+  #private
 
-  def require_logged_in
-    redirect_to controller: 'users', action: 'new' unless current_user
-  end
+  #def require_logged_in
+  #  redirect_to controller: 'users', action: 'new' unless current_user
+  #end
 
 end
