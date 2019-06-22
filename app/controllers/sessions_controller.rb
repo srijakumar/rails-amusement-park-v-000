@@ -1,16 +1,17 @@
-#<class SessionsController < ApplicationController
-#  def new
-#  end
+class SessionsController < ApplicationController
 
-#  def create
-#    return redirect_to(controller: 'sessions', action: 'new') if !params[:name] || params[:name].empty?
-#    session[:name] = params[:name]
-#    redirect_to controller: 'application', action: 'hello'
-#  end
+  def new
+    @user=User.new
+    @users = User.all
+  end
 
-#  def destroy
-#    session.delete :name
-#    redirect_to controller: 'application', action:'hello'
-#  end
+  def create
+  
+  end
 
-#end
+ def destroy
+       session[:user_id].delete
+       redirect_to root_url
+  end
+
+end

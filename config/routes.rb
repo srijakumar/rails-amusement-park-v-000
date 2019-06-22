@@ -1,28 +1,15 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-#get 'secrets/new'
+  root "static_pages#home"
 
-#root 'application#hello'
-root 'application#hello'
-#get '/signup' => 'users#new'
-#get '/signup' => 'users#create'
-#get '/logout' => 'users#destroy'
+  resources :users
+  resources :attractions
 
-#post '/signup' => 'users#create'
+  post "/rides/new", to: "rides#new"
 
-#post '/users' => 'secrets#show'
-#post '/user' => 'secrets#show'
-
-#post '/users' => 'secrets#show'
-#post '/user' => 'secrets#show'
-
-
-#get '/secret' => 'secrets#show'
-
-#get '/secret' => 'secrets#show'
-resources :users, only:[:new, :create]
-resources :rides
-resources :attractions
+  get "/signin", to: "sessions#new"
+  post "/sessions/create", to: "sessions#create"
+  delete "/signout", to: "sessions#destroy"
 
 end
