@@ -9,6 +9,7 @@ get '/login' => 'users#create'
 get '/logout' => 'users#destroy'
 
 post '/login' => 'users#create'
+post '/user' => 'secrets#show'
 
 get '/secret' => 'secrets#show'
 resources :users

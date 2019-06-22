@@ -5,6 +5,17 @@
 
 
 <%= form_tag("/user") do %>
-  Name: <%= text_field_tag "name" %><br>
-  <%= submit_tag "Login" %>
+  Name: <%= text_field(:user, :name) %><br>
+  <br>
+  Height: <%= text_field(:user, :height) %><br>
+  <br>
+  Happiness: <%= text_field(:user, :happiness) %><br>
+  <br>
+  Nausea: <%= text_field(:user, :nausea) %><br>
+  <br>
+  Tickets: <%= text_field(:user, :tickets) %><br>
+  <br>
+  Password: <%= text_field(:user, :password) %><br>
+  <br>
+  <%= submit_tag "Create User" %>
 <% end %>
