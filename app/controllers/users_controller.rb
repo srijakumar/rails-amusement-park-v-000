@@ -15,5 +15,9 @@ class UsersController < ApplicationController
     redirect_to controller: 'application', action:'hello'
   end
 
+  def show
+
+  end
+
 
 end
