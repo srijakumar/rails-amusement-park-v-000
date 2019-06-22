@@ -4,12 +4,12 @@ Rails.application.routes.draw do
 get 'secrets/new'
 
 root 'application#hello'
-get '/login' => 'users#new'
-get '/login' => 'users#create'
+get '/signup' => 'users#new'
+get '/signup' => 'users#create'
 get '/logout' => 'users#destroy'
 
-post '/login' => 'users#create'
-post '/user' => 'secrets#show'
+post '/signup' => 'users#create'
+post '/users' => 'secrets#show'
 
 get '/secret' => 'secrets#show'
 resources :users
