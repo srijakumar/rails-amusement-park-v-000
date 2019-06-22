@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 #get 'secrets/new'
 
 #root 'application#hello'
+root 'application#hello'
 #get '/signup' => 'users#new'
 #get '/signup' => 'users#create'
 #get '/logout' => 'users#destroy'
@@ -13,6 +14,11 @@ Rails.application.routes.draw do
 #post '/users' => 'secrets#show'
 #post '/user' => 'secrets#show'
 
+#post '/users' => 'secrets#show'
+#post '/user' => 'secrets#show'
+
+
+#get '/secret' => 'secrets#show'
 
 #get '/secret' => 'secrets#show'
 resources :users, only:[:new, :create]
