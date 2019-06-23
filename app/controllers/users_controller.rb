@@ -26,4 +26,12 @@ class UsersController < ApplicationController
     redirect_to controller: 'application', action:'hello'
   end
 
+<<<<<<< HEAD
+=======
+  def show
+
+  end
+
+
+>>>>>>> cf1b99947bef2cdcdb3469e3be5f5588593923df
 end
