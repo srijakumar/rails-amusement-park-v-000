@@ -4,7 +4,7 @@
 <% end %>-->
 
 
-<%= form_tag("/user") do %>
+<%= form_tag("/users") do %>
   Name: <%= text_field(:user, :name) %><br>
   <br>
   Height: <%= text_field(:user, :height) %><br>
@@ -15,7 +15,7 @@
   <br>
   Tickets: <%= text_field(:user, :tickets) %><br>
   <br>
-  Password: <%= text_field(:user, :password) %><br>
+  Password: <%= text_field(:user, :password, type: "password")%><br>
   <br>
   <%= submit_tag "Create User" %>
 <% end %>
