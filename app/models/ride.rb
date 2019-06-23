@@ -4,8 +4,6 @@ class Ride < ActiveRecord::Base
 
   def take_ride
     #byebug
-
-
     if user.tickets < attraction.tickets && user.height < attraction.min_height
       return "Sorry. You do not have enough tickets to ride the Roller Coaster. You are not tall enough to ride the Roller Coaster."
     end
@@ -15,6 +13,7 @@ class Ride < ActiveRecord::Base
     if user.height < attraction.min_height
       return "Sorry. You are not tall enough to ride the Roller Coaster."
     end
+
 
     @user = User.find_by(name: params[:user][:name])
 
@@ -28,8 +27,5 @@ class Ride < ActiveRecord::Base
     :ticket => params[:user][:ticket]
     )
 
-
   end
-
-
 end
