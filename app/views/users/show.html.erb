@@ -1,3 +1,6 @@
-<%= @user.name%>
+<p><strong>Name:</strong> <%= @user.name %></p>
+<p><strong>Tickets:</strong> <%= @user.tickets %></p>
+<p><strong>Mood:</strong>  <%= @user.mood %></p>
+<p><strong>Height:</strong> <%= @user.height %> inches</p>
 
-Mood: <%=@user.mood %>
+<p><%= link_to 'Edit', edit_user_path(@user) %></p>
