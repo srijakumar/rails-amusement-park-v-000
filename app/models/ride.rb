@@ -14,17 +14,17 @@ class Ride < ActiveRecord::Base
       return "Sorry. You are not tall enough to ride the Roller Coaster."
     end
 
+    @ride = Ride.new
+    #@user = User.find_by(name: params[:user][:name])
 
-    @user = User.find_by(name: params[:user][:name])
+    #params[:user][:happiness] = self.user.happiness + self.attraction.happiness_rating,
+    #params[:user][:nausea] = self.user.nausea + self.attraction.nausea_rating,
+    #params[:user][:ticket] = self.user.tickets - self.attraction.tickets
 
-    params[:user][:happiness] = self.user.happiness + self.attraction.happiness_rating,
-    params[:user][:nausea] = self.user.nausea + self.attraction.nausea_rating,
-    params[:user][:ticket] = self.user.tickets - self.attraction.tickets
-
-    @user.update(
-    :happiness => params[:user][:happiness],
-    :nausea => params[:user][:nausea],
-    :ticket => params[:user][:ticket]
+    @ride.user.update(
+    :happiness => self.user.happiness + self.attraction.happiness_rating,
+    :nausea => self.user.nausea + self.attraction.nausea_rating,
+    :ticket => self.user.tickets - self.attraction.tickets
     )
 
   end
