@@ -5,6 +5,7 @@
 
   <%=f.text_field :password, type: :password, id: "password" %>
 
-  <%=f.submit "Sign In" %>
+  <!--<%=f.submit "Sign In" %>-->
+  <%= link_to "Sign In", new_user_path, class: 'button' %>
 
 <% end %>
