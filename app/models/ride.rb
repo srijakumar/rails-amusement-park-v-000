@@ -16,13 +16,13 @@ class Ride < ActiveRecord::Base
   end
     #@ride = Ride.new
 
-    @user = User.find(self.user_id)
+  #  @user = User.find(self.user_id)
 
-    @user.update(
-      :happiness => self.user.happiness + self.attraction.happiness_rating,
-      :nausea => self.user.nausea + self.attraction.nausea_rating,
-      :ticket => self.user.tickets - self.attraction.tickets
-      )
+  #  @user.update(
+  #    :happiness => self.user.happiness + self.attraction.happiness_rating,
+  #    :nausea => self.user.nausea + self.attraction.nausea_rating,
+  #    :ticket => self.user.tickets - self.attraction.tickets
+  #    )
 
 #  end
 end
