@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
     #validates :admin, :presence => true
 
     def mood
+      
       if (self.happiness < self.nausea)
         return 'sad'
       else

@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
+  #  byebug
     @user = User.find_by(params[:id])
     #string is passed in this method
   end
