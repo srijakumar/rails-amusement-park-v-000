@@ -13,19 +13,16 @@ class Ride < ActiveRecord::Base
     if user.height < attraction.min_height
       return "Sorry. You are not tall enough to ride the Roller Coaster."
     end
-
-    @ride = Ride.new
-    #@user = User.find_by(name: params[:user][:name])
-
-    #params[:user][:happiness] = self.user.happiness + self.attraction.happiness_rating,
-    #params[:user][:nausea] = self.user.nausea + self.attraction.nausea_rating,
-    #params[:user][:ticket] = self.user.tickets - self.attraction.tickets
-
-    @ride.user.update(
-    :happiness => self.user.happiness + self.attraction.happiness_rating,
-    :nausea => self.user.nausea + self.attraction.nausea_rating,
-    :ticket => self.user.tickets - self.attraction.tickets
-    )
-
   end
+    #@ride = Ride.new
+
+    @user = User.find(self.user_id)
+
+    @user.update(
+      :happiness => self.user.happiness + self.attraction.happiness_rating,
+      :nausea => self.user.nausea + self.attraction.nausea_rating,
+      :ticket => self.user.tickets - self.attraction.tickets
+      )
+
+#  end
 end
