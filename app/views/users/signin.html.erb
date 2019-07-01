@@ -1,11 +1,11 @@
-<%= form_for(:user, url: {controller: :sessions, action: :create}) do |f| %>
+<!--<%= form_for(:user, url: {controller: :sessions, action: :create}) do |f| %>
 
   <%=f.collection_select :name, User.all, :name, "name" %>
   <%=f.text_field :name %>
 
   <%=f.text_field :password, type: :password, id: "password" %>
 
-  <!--<%=f.submit "Sign In" %>-->
+#  <%=f.submit "Sign In" %>
   <%= link_to "Sign In", new_user_path, class: 'button' %>
 
-<% end %>
+<% end %>-->

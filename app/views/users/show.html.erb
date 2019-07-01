@@ -1,8 +1,57 @@
-<p><strong>Name:</strong> <%= @user.name %></p>
-<p><strong>Tickets:</strong> <%= @user.tickets %></p>
-<p><strong>Mood:</strong>  <%= @user.mood %></p>
-<p><strong>Height:</strong> <%= @user.height %> inches</p>
 
-<p><%= link_to 'Edit', edit_user_path(@user) %></p>
+   <strong>Name:</strong>
+   <%= @user.name %>
+<br>
 
-<p><%= link_to 'Logout', signout_path, method: :delete %></p>
+ <% if @user.admin? %>
+
+   <p>
+     <strong>ADMIN</strong>
+   </p>
+
+   <br>
+
+ <% else %>
+
+   <p>
+     <strong>Nausea:</strong>
+     <%= @user.nausea %>
+   </p>
+
+   <br>
+
+   <p>
+     <strong>Happiness:</strong>
+     <%= @user.happiness %>
+   </p>
+
+   <br>
+
+   <p>
+     <strong>Mood:</strong>
+     <%= @user.mood %>
+   </p>
+
+   <br>
+
+   <p>
+     <strong>Tickets:</strong>
+     <%= @user.tickets %>
+   </p>
+
+   <br>
+
+   <p>
+     <strong>Height:</strong>
+     <%= @user.height %>
+   </p>
+   <br>
+
+ <% end %>
+
+ <%= link_to "See attractions", attractions_path %><br><br>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<br>
+<%= link_to 'Back', users_path %>

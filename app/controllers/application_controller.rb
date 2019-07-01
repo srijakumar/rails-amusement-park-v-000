@@ -19,8 +19,14 @@ class ApplicationController < ActionController::Base
   before_action :require_logged_in, except: [:new, :create, :home]
 
   def logged_in?
-  !!current_user
-end
+    !!current_user
+  end
+
+  def admin_only
+    if !current_user.admin
+      redirect_to root_path, notice: "Not an admin"
+    end
+  end
 
 private
   def require_logged_in

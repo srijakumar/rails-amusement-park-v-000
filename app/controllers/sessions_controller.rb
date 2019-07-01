@@ -7,7 +7,14 @@ class SessionsController < ApplicationController
 
   def create
     #byebug
-     @user = User.find_by(name: params[:user][:name])
+    if params[:user][:name] == nil || params[:user][:name].empty?
+      redirect_to signin_path
+    else
+       @user = User.find_by(name: params[:user][:name])
+    end
+
+
+
      if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
       redirect_to user_path(@user), notice: "Welcome"

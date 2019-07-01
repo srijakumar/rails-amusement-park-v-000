@@ -1,10 +1,5 @@
-<%= form_for(:user, url: {controller: :sessions, action: :create}) do |f| %>
+<h1>Log In</h1>
 
-  <%=f.collection_select :name, User.all, :name, "name" %>
-  <%=f.text_field :name %>
+<br><%= render 'form' %><br>
 
-  <%=f.text_field :password, type: :password, id: "password" %>
-
-  <%=f.submit "Login" %>
-
-<% end %>
+<%= link_to 'Back', root_path %>

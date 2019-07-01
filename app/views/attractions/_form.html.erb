@@ -1,0 +1,20 @@
+<%= form_with(model: attraction, local: true) do |form| %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+
+    <%= form.label :tickets %>
+    <%= form.number_field :tickets %>
+
+    <%= form.label :nausea_rating %>
+    <%= form.number_field :nausea_rating %>
+
+    <%= form.label :happiness_rating %>
+    <%= form.number_field :happiness_rating %>
+
+    <%= form.label :min_height %>
+    <%= form.number_field :min_height %>
+
+    <%= form.submit %>
+
+<% end %>

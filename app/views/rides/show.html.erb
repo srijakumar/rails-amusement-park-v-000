@@ -1,0 +1,18 @@
+
+  <strong>Name:</strong>
+  <%= @ride.name %>
+<br>
+  <strong>Tickets:</strong>
+  <%= @ride.tickets %>
+<br>
+  <strong>Nausea rating:</strong>
+  <%= @ride.nausea_rating %>
+<br>
+  <strong>Happiness rating:</strong>
+  <%= @ride.happiness_rating %>
+<br>
+  <strong>Min height:</strong>
+  <%= @ride.min_height %>
+<br>
+<%= link_to 'Edit', edit_ride_path(@ride) %> 
+<%= link_to 'Back', rides_path %>
