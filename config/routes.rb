@@ -5,13 +5,21 @@ Rails.application.routes.draw do
 
 
 
-  get "/signin", to: "sessions#new"
-  post "/sessions/create", to: "sessions#create"
-  delete "/signout", to: "sessions#destroy"
+  #get "/signin", to: "sessions#new"
+  #post "/sessions/create", to: "sessions#create"
+  #delete "/signout", to: "sessions#destroy"
+
+  #resources :users
+  #resources :attractions
+
+  #post "/rides/new", to: "rides#new"
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
 
   resources :users
   resources :attractions
-
-  post "/rides/new", to: "rides#new"
+  resources :rides
 
 end
